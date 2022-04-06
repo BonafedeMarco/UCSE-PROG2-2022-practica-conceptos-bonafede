@@ -98,5 +98,17 @@ namespace PracticaConceptosBonafede
         {
             return Regex.IsMatch(input, @"\d{2}-\d{8}-\d{2}");
         }
+
+        // Punto 13
+        public static int Restar(this int minuendo, int sustraendo)
+        {
+            return minuendo - sustraendo;
+        }
+
+        // Punto 14 (falta terminar)
+        //public static Int32 operator /(Int32 a, Int32 b)
+        //{
+        //    return (int)(((decimal)(a / b) % 1) * 100);
+        //}
     }
 }
