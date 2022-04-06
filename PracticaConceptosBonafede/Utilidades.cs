@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PracticaConceptosBonafede
@@ -72,6 +73,30 @@ namespace PracticaConceptosBonafede
                 fecha = DateTime.MinValue;
             }
             return fecha;
+        }
+
+        // Punto 7
+        public static string InvertirString(this string input)
+        {
+            return input.Reverse().ToString();
+        }
+
+        // Punto 8
+        public static string ConcatenarArrayStrings(this string[] array, char separador)
+        {
+            return string.Join(separador.ToString(), array);
+        }
+
+        // Punto 9
+        public static bool EsEmailValido(this string input)
+        {
+            return Regex.IsMatch(input, @"[\w.]+@+[\w.]+");
+        }
+
+        // Punto 10
+        public static bool EsCUITValido(this string input)
+        {
+            return Regex.IsMatch(input, @"\d{2}-\d{8}-\d{2}");
         }
     }
 }
