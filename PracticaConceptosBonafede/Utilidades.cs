@@ -13,14 +13,14 @@ namespace PracticaConceptosBonafede
         public static int ContarPalabras(this string input)
         {
             string[] palabras = input.Split(' ');
-            return palabras.Count();
+            return palabras.Count(); //podria ser una sola linea
         }
 
         // Punto 2
         public static int ContarPalabras(this string input, char separador)
         {
             string[] palabras = input.Split(separador);
-            return palabras.Count();
+            return palabras.Count(); //podria ser una sola linea
         }
 
         // Punto 3
@@ -30,7 +30,7 @@ namespace PracticaConceptosBonafede
         }
 
         // Punto 4
-        public static double ObtenerPromedio(this List<int> listaEnteros)
+        public static double ObtenerPromedio(this List<int> listaEnteros) //no hace falta "enteros" en el nombre
         {
             return listaEnteros.Average();
         }
@@ -56,6 +56,7 @@ namespace PracticaConceptosBonafede
                 else
                     restaImpares -= numero;
             }
+            //ver de usar lambda
             return sumaPares * restaImpares;
         }
 
@@ -66,6 +67,7 @@ namespace PracticaConceptosBonafede
             try
             {
                 string[] valores = input.Split('/');
+                //podria usar DateTime.Parse()
                 fecha = new DateTime(Convert.ToInt32(valores[2]), Convert.ToInt32(valores[1]), Convert.ToInt32(valores[0]));
             }
             catch (Exception)
